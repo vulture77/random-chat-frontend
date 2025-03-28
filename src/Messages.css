@@ -1,0 +1,106 @@
+.messages-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 20%;
+  background: #1a1a2e;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background: #16213e;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu-list li:hover,
+.menu-list .active {
+  background: #0f3460;
+}
+
+.message-section {
+  flex: 1;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.chat-list {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-item:hover {
+  background: #e2e2e2;
+}
+
+.chat-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.last-message {
+  font-size: 14px;
+  color: gray;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: gray;
+}
+
+.no-messages {
+  text-align: center;
+  color: gray;
+}

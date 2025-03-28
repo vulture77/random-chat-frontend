@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('C:\Users\ChandanM\Randomchat\frontend\public\dragon-ball-z-goku-portrait-jr9nymmd7aulz0yg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-list li {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-list li:hover, .menu-list .active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.chat-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.chat-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.chat-header {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: transparent;
+}
+
+.message-sent {
+    background: rgba(0, 123, 255, 0.3);
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.message-received {
+    background: rgba(200, 200, 200, 0.3);
+    color: black;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.upgrade-btn {
+    cursor: pointer;
+    color: gold;
+    font-weight: bold;
+}
+
+.plans-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: #433333;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.plan-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.plan {
+    padding: 15px;
+    width: 30%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bronze {
+    background: #cd7f32;
+}
+
+.silver {
+    background: #c0c0c0;
+}
+
+.gold {
+    background: #ffd700;
+}
+
+.plan button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plan button:hover {
+    background: #0056b3;
+}
+
+/* Emoji Picker Positioned Above Input */
+.emoji-picker {
+    display: flex;
+    justify-content: center;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 8px;
+    gap: 8px;
+    position: absolute;
+    bottom: 120px;  /* Above the input area */
+    left: 66%;  /* Shifted slightly to the right */
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+
+.emoji-picker span {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+.emoji-picker span:hover {
+    transform: scale(1.2);
+}
+
