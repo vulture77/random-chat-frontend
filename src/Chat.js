@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
-import { API_URL } from "config"; // Import API URL
+import { API_URL } from "./config"; // ✅ Correct import
 import "./ChatPage.css";
-import config from "config";
 
 const socket = io(API_URL, {
   transports: ["websocket"],
@@ -45,7 +44,7 @@ const ChatPage = ({ user, setUser }) => {
 
   const sendMessage = () => {
     if (input.trim()) {
-      socket.emit("chat:message", { user, text: input });
+      socket.emit("chat:message", { sender: user, text: input });
       setMessages((prev) => [...prev, `You: ${input}`]);
       setInput("");
     }
@@ -81,12 +80,8 @@ const ChatPage = ({ user, setUser }) => {
           <li onClick={() => navigate("/profile")}>Profile</li>
           <li onClick={() => navigate("/messages")}>Messages</li>
           <li>Friends</li>
-          <li onClick={() => setShowPlans(!showPlans)} className="upgrade-btn">
-            Upgrade
-          </li>
-          <li onClick={handleLogout} className="logout-btn">
-            Logout
-          </li>
+          <li onClick={() => setShowPlans(!showPlans)} className="upgrade-btn">Upgrade</li>
+          <li onClick={handleLogout} className="logout-btn">Logout</li>
         </ul>
       </div>
       <div className="chat-section">
